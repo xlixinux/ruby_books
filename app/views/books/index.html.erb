@@ -2,6 +2,10 @@
 
 <ul>
 	<% @books.each do |book| %>
-	<li><%= book %></li>
+	<li>
+		<%= book.title %>
+		(<%= book.rating %>)
+		<%= number_to_currency(book.price) %>
+	</li>
 	<% end %>
 </ul>
