@@ -22,6 +22,9 @@
         <th>Price</th>
         <td><%= format_price(book) %></td>
       </tr>
+      <tr>
+        <td><%= link_to book.title, book %> 
+      </tr>
     </table>
   </article>
 <% end %>
