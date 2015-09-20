@@ -17,6 +17,15 @@ class BooksController < ApplicationController
 		redirect_to book_path(@book)
 	end
 
+	def new
+		@book = Book.new
+	end
+
+	def create
+		@book = Book.create(book_params)
+		redirect_to @book
+	end
+
 private 
 	def book_params
 		book_params = params.require(:book).
