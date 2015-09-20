@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'books' => 'books#index'
   get 'books/:id' => 'books#show', as: "book"
   get 'books/:id/edit' => 'books#edit', as: 'edit_book'
+  patch 'books/:id' => "books#update"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
