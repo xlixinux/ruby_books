@@ -22,7 +22,8 @@
       <tr>
       <td>
       <%= link_to "Books", books_path %> |
-      <%= link_to "Edit", edit_book_path(@book) %>
+      <%= link_to "Edit", edit_book_path(@book) %> |
+      <%= link_to "Delete", book_path(@book), method: :delete, data: { confirm: "Are you sure!" }%>
       </td>
       </tr>
     </table>
